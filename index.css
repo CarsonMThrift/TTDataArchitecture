@@ -1,0 +1,66 @@
+h1 {
+
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: dodgerblue;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+/*General format for the list items*/
+li {
+
+    list-style: none;
+    border: 1px solid black;
+    padding: 20px 20px;
+    margin-left: -20px;
+    margin-top: 15px;
+    background-color: white;
+    height: auto;
+    width: auto;
+
+}
+
+/*General format for the delete/fav buttons*/
+.deleteButton, .favButton, .downButton, .upButton {
+
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 50px;
+
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background:dodgerblue;
+}
+
+/*General bg color*/
+body {
+
+    background: url("razer_chroma_wallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+/*success button colors*/
+.button.success {
+
+    background-color: lightgrey;
+    color: dodgerblue;
+    margin-left: 20px;
+    display: inline-block;
+    float: right;
+
+}
+
+.button.success:hover {
+    background:dodgerblue;
+}
+
+.input-group-field {
+
+    margin-bottom: 20px;
+
+}
