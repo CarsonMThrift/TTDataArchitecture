@@ -38,7 +38,7 @@ ul li:hover {
 /*General bg color*/
 body {
 
-    background: url("razer_chroma_wallpaper.png");
+    /* background: url("razer_chroma_wallpaper.png"); */
     background-size: cover;
     background-repeat: no-repeat;
 
