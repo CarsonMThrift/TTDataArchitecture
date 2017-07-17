@@ -19,42 +19,47 @@
 
     <div id="PageHeader">
         <a href="index.html">
-        <div>
-            <img src="logos/stacked transparent.png" id="TTLogo">
-            <h1>Add a Project</h1>
             <div>
-                <h2>Please fill out the following information about the project</h2>
-            </div>
+                <img src="logos/ttlogo1.png" id="TTLogo">
+                <h1>Add a Project</h1>
+                <div>
+                    <h2>Please fill out the following information about the project</h2>
+                </div>
 
-        </div>
+            </div>
         </a>
     </div>
 
-    <div class="row">
-        <div class="medium-12 column">
-            <h4>Upload an Image for Your Project: </h4>
-            <form id="project-form">
 
-                <div class="fallback">
-                    <input name="file" type="file" multiple />
-                </div>
-            <h4>Project Information:</h4>
+    <div id="WholeForm">
+        <div class="row">
+            <div class="medium-12 column">
+                <h4>Upload an Image for Your Project: </h4>
+                <form id="project-form">
 
-     <div class="input-group">
-            <input class="input-group-field" type="text" name="projectName" placeholder="Project Name..." autofocus required/>
-            <input class="input-group-field" type="text" name="projectType" placeholder="Project Type..."  required/>
-            <input class="input-group-field" type="text" name="projectDate" placeholder="Project Date..."  required/>
-            <input class="input-group-field" type="text" name="projectCity" placeholder="Project City..."  required/>
-            <input class="input-group-field" type="text" name="projectState" placeholder="Project State..."  required/>
-            <input class="input-group-field" type="text" name="projectZipCode" placeholder="Project ZIP Code..."  required/>
+                    <div class="fallback">
+                        <input name="file" type="file" multiple />
+                    </div>
+                    <h4>Project Information:</h4>
 
-    </div>
-    <div class="input-group-button">
-            <button class="button" id="submitButton" type="submit">Add Project</button>
-    </div>
+                    <div class="input-group">
+                        <input class="input-group-field" type="text" name="projectName" placeholder="Project Name..." autofocus required/>
+                        <input class="input-group-field" type="text" name="projectType" placeholder="Project Type..." required/>
+                        <input class="input-group-field" type="text" name="projectDate" placeholder="Project Date..." required/>
+                        <input class="input-group-field" type="text" name="projectCity" placeholder="Project City..." required/>
+                        <input class="input-group-field" type="text" name="projectState" placeholder="Project State..." required/>
+                        <input class="input-group-field" type="text" name="projectZipCode" placeholder="Project ZIP Code..." required/>
 
-    </div>
-    </form>
+
+                    </div>
+                    <div class="input-group-button" id="ButtonBack">
+                        <button class="button" id="submitButton" type="submit">Add Project</button>
+                    </div>
+
+
+            </div>
+            </form>
+        </div>
     </div>
     </div>
 
