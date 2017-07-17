@@ -4,6 +4,8 @@ h1 {
     margin-bottom: 30px;
     color: dodgerblue;
     font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 70px;
+    float: left;
 
 }
 
@@ -44,19 +46,39 @@ body {
 
 }
 
-/*success button colors*/
-.button.success {
+.wrapper{
 
-    background-color: lightgrey;
-    color: dodgerblue;
-    margin-left: 20px;
-    display: inline-block;
-    float: right;
+    text-align: center;
 
 }
 
-.button.success:hover {
+/*success button colors*/
+.button {
+
+    background-color: lightgrey;
+    color: dodgerblue;
+    width: 10rem;
+    position: relative;
+    top: 4rem;
+    float: right;   
+
+}
+
+.button:hover {
     background:dodgerblue;
+}
+
+#searchInput {
+
+    background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png'); /* Add a search icon to input */
+    background-position: 9px 9px; /* Position the search icon */
+    background-size: 20px 20px; 
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
 }
 
 .input-group-field {
