@@ -68,7 +68,7 @@ ul li:hover {
 }
 
 /*both buttons add and submit*/
-.button, #submitButton {
+.button, #submitButton, #AddProjectButton {
 
     background-color: lightgrey;
     color: dodgerblue;
@@ -82,8 +82,9 @@ ul li:hover {
 
 }
 
-.button:hover, #submitButton:hover {
-    background: lawngreen;
+.button:hover, #submitButton:hover, #AddProjectButton:hover {
+    background: lightgreen;
+    color: white;
 }
 
 #AddProjectButton {
