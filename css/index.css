@@ -75,8 +75,6 @@ ul li:hover {
     width: 10rem;
     position: relative;
     top: 4rem;
-    float: right;
-    margin-right: 5rem;  
     border-radius: 6px;
  
 
@@ -87,9 +85,20 @@ ul li:hover {
     color: white;
 }
 
+#submitButton {
+
+    font-size: 25px;
+    width: 240px;
+    height: 60px;
+    margin-left: 40%;
+
+}
+
 #AddProjectButton {
 
+    margin-right: 5rem; 
     font-size: 22px;
+    float: right;
 
 }
 
