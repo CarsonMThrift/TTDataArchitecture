@@ -1,3 +1,7 @@
+
+/**
+ * Function to allow live filtering when making a query on the main page.
+ */
 function filterFunc() {
     // Declare variables
     var input, filter, ul, aRefs, a, i;
@@ -16,3 +20,27 @@ function filterFunc() {
         }
     }
 }
+
+/**
+ * Populates the list of Projects on the main page.
+ */
+function populateList() {
+
+    // references
+    var database, list
+
+    list = document.getElementById("myUL")
+
+    //populating the list from php database
+    for(i=0; i < database.length; i++){
+        list.appendChild(database[i])
+    }
+
+
+}
+
+//Function calls
+populateList();
+
+
+
