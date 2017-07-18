@@ -1,4 +1,5 @@
 
+/*Backgrond of site*/
 body {
 
     margin-bottom: 10rem;
@@ -6,6 +7,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: 1920px 1080px;
+    
 
 }
 
@@ -58,13 +60,19 @@ li {
 
 }
 /* Darker background-color on hover */
-ul li:hover {
+ul li:hover  {
     background:dodgerblue;
     color:white;
     -webkit-animation-duration: 0.2s;
     transition-duration: 0.2s;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
+}
+
+/*Links*/
+
+a:hover {
+    color: white;
 }
 
 /*both buttons add and submit*/
@@ -80,6 +88,7 @@ ul li:hover {
 
 }
 
+/*hover of all buttons*/
 .button:hover, #submitButton:hover, #AddProjectButton:hover {
     background: lightgreen;
     color: white;
@@ -116,7 +125,7 @@ ul li:hover {
 /*Search Box*/
 #searchInput {
 
-    background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png'); /* Add a search icon to input */
+    background-image: url('/icons/searchIconGrey.png'); /* Add a search icon to input */
     background-position: 9px 9px; /* Position the search icon */
     background-size: 20px 20px; 
     background-repeat: no-repeat; /* Do not repeat the icon image */

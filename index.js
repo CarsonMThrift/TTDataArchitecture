@@ -1,18 +1,18 @@
 function filterFunc() {
     // Declare variables
-    var input, filter, ul, li, a, i;
+    var input, filter, ul, aRefs, a, i;
     input = document.getElementById('searchInput');
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
+    aRefs = ul.getElementsByTagName('a');
 
     // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
+    for (i = 0; i < aRefs.length; i++) {
+        a = aRefs[i].getElementsByTagName("li")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
+            aRefs[i].style.display = "";
         } else {
-            li[i].style.display = "none";
+            aRefs[i].style.display = "none";
         }
     }
 }
