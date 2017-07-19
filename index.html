@@ -13,6 +13,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css" />
 
+    <!--Firebase stuff  -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-messaging.js"></script>
+    <script src="js/database.js"></script>
+
     <style>
         body {
             background-image: url('/images/Clubhouse-Night.jpg');
@@ -67,24 +75,9 @@
         </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBTzDuqYvzp6w4I236Ymie1eR_a0cM60hg",
-            authDomain: "ttdataarchitecture.firebaseapp.com",
-            databaseURL: "https://ttdataarchitecture.firebaseio.com",
-            projectId: "ttdataarchitecture",
-            storageBucket: "",
-            messagingSenderId: "868370223403"
-        };
-        firebase.initializeApp(config);
-
-    </script>
-
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
     <!--<script src="addProjectPage.js"></script>-->
-    <script src="/reload/reload.js"></script>
+    <!-- <script src="/reload/reload.js"></script> -->
 
 
 </body>
