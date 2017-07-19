@@ -1,0 +1,64 @@
+[debug] [2017-07-19T17:16:23.906Z] ----------------------------------------------------------------------
+[debug] [2017-07-19T17:16:23.908Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\thrif\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-07-19T17:16:23.909Z] CLI Version:  3.9.1
+[debug] [2017-07-19T17:16:23.909Z] Platform:     win32
+[debug] [2017-07-19T17:16:23.909Z] Node Version: v6.11.0
+[debug] [2017-07-19T17:16:23.910Z] Time:         Wed Jul 19 2017 13:16:23 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:23.910Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-19T17:16:23.920Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-19T17:16:23.921Z] > authorizing via signed-in user
+[debug] [2017-07-19T17:16:23.922Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-07-19T17:16:23.923Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/xhZqwEo11IES-xdyBf2fLL79cyhvz-xfRkVLPtB5CgeAUvNdyK0qr-EOUOV7KMKP',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Jul 19 2017 13:16:23 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:24.030Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-19T17:16:24.037Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ttdataarchitecture  
+ Wed Jul 19 2017 13:16:24 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:24.527Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-19T17:16:24.527Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ttdataarchitecture/tokens  
+ Wed Jul 19 2017 13:16:24 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:24.834Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\thrif\Documents\TT\TTDataArchitecture'...
+[info] 
+[debug] [2017-07-19T17:16:24.838Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/ttdataarchitecture  
+ Wed Jul 19 2017 13:16:24 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:26.069Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-19T17:16:26.069Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/868370223403/clients/_:getWebAppConfig  
+ Wed Jul 19 2017 13:16:26 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:26.980Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-19T17:16:27.003Z] TypeError: Cannot read property 'public' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2017-07-19T17:16:47.110Z] ----------------------------------------------------------------------
+[debug] [2017-07-19T17:16:47.113Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\thrif\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-07-19T17:16:47.113Z] CLI Version:  3.9.1
+[debug] [2017-07-19T17:16:47.114Z] Platform:     win32
+[debug] [2017-07-19T17:16:47.114Z] Node Version: v6.11.0
+[debug] [2017-07-19T17:16:47.114Z] Time:         Wed Jul 19 2017 13:16:47 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:47.114Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-19T17:16:47.125Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-19T17:16:47.125Z] > authorizing via signed-in user
+[debug] [2017-07-19T17:16:47.127Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ttdataarchitecture  
+ Wed Jul 19 2017 13:16:47 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:47.657Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-19T17:16:47.658Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ttdataarchitecture/tokens  
+ Wed Jul 19 2017 13:16:47 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:48.174Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\thrif\Documents\TT\TTDataArchitecture'...
+[info] 
+[debug] [2017-07-19T17:16:48.179Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/ttdataarchitecture  
+ Wed Jul 19 2017 13:16:48 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:48.661Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-19T17:16:48.661Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/868370223403/clients/_:getWebAppConfig  
+ Wed Jul 19 2017 13:16:48 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-19T17:16:48.978Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-19T17:16:48.995Z] TypeError: Cannot read property 'public' of undefined
+[error] 
+[error] Error: An unexpected error has occurred.
