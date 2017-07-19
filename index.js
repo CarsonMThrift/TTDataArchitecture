@@ -26,6 +26,8 @@ function filterFunc() {
  */
 function populateList() {
 
+    //TALK TO DARNELL
+
     // references
     var database, list
 
