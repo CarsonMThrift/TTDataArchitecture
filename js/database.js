@@ -55,9 +55,10 @@ function verifyUserInput() {
     const date = f.projectDate.value
     const city = f.projectCity.value
     const state = f.projectState.value
+    const status = f.projectStatus.value
     const zip = f.projectZipCode.value
 
-    if (name == "" || id == "" || type == "" || date == "" || city == "" || state == "" || zip == "") {
+    if (name == "" || id == "" || type == "" || date == "" || city == "" || state == "" || status =="" || zip == "") {
         return false;
     } else {
         return true;
@@ -161,8 +162,6 @@ function uploadImage() {
     //Listen for changes
     fileButton.addEventListener('change', function (e) {
 
-        var projectId = document.getElementsByName("projectId")
-
         if (form.projectId.value == null || form.projectId.value == "") {
             alert("For storage purposes, please enter a project id before submitting any files")
             fileButton.value = ''
@@ -174,7 +173,7 @@ function uploadImage() {
             var file = e.target.files[0]
 
             //Storage Ref
-            var storageRef = firebase.storage().ref('propertyPictures/' + projectId.value + '/' + file.name);
+            var storageRef = firebase.storage().ref('propertyPictures/' + form.projectId.value + '/' + file.name);
 
             //Upload File, subscribing to state changes
             var task = storageRef.put(file);
