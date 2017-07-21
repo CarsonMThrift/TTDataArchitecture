@@ -1,6 +1,3 @@
-
-
-
 /**
  * Function to write data to the Firebase Database based on the user input
  */
@@ -17,16 +14,12 @@ function writeUserData(name, id, type, date, city, state, zip, file) {
         projectZipCode: zip,
 
     });
-
     var delayMillis = 1000; //1 second
 
     setTimeout(function () {
         //your code to be executed after 1 second
         redirect();
     }, delayMillis);
-
-
-
 }
 
 /**
@@ -44,7 +37,29 @@ function submitForm() {
     const state = f.projectState.value
     const zip = f.projectZipCode.value
 
-    writeUserData(name, id, type, date, city, state, zip);
+    if(verifyUserInput()){
+        writeUserData(name, id, type, date, city, state, zip);
+    }else{
+        alert("Please fill out all required fields")
+    }
+}
+
+function verifyUserInput() {
+
+    const f = document.getElementById("project-form")
+    const name = f.projectName.value
+    const id = f.projectId.value
+    const type = f.projectType.value
+    const date = f.projectDate.value
+    const city = f.projectCity.value
+    const state = f.projectState.value
+    const zip = f.projectZipCode.value
+
+    if (name == "" || id == "" || type == "" || date == "" || city == "" || state == "" || zip == "") {
+        return false;
+    }else{
+        return true;
+    }
 
 }
 
@@ -86,7 +101,6 @@ function loadProjects() {
     }, function (errorObject) {
         console.log("The read failed: " + errorObject.code);
     });
-
 }
 
 /**
@@ -141,13 +155,8 @@ function uploadImage() {
 
             );
         }
-
     });
-
-
 }
-
-
 
 /**
  * Function to redirect to the homepage when a project is submitted.
@@ -157,6 +166,9 @@ function redirect() {
     return false;
 }
 
+/**
+ * Function to initiate the firebase application.
+ */
 function firebaseInit() {
     var config = {
         apiKey: "AIzaSyBTzDuqYvzp6w4I236Ymie1eR_a0cM60hg",
