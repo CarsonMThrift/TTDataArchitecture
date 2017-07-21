@@ -4,7 +4,7 @@
 /**
  * Function to write data to the Firebase Database based on the user input
  */
-function writeUserData(name, id, type, date, city, state, zip) {
+function writeUserData(name, id, type, date, city, state, zip, file) {
 
 
     firebaseInit();
@@ -18,9 +18,13 @@ function writeUserData(name, id, type, date, city, state, zip) {
         projectCity: city,
         projectState: state,
         projectZipCode: zip,
+        // projectFile: file,
 
     });
-    
+
+    //Uploads image to firebase storage for later access
+    // uploadImage(file);
+
 
 
     var delayMillis = 1000; //1 second
@@ -30,7 +34,7 @@ function writeUserData(name, id, type, date, city, state, zip) {
         redirect();
     }, delayMillis);
 
-    
+
 
 }
 
@@ -63,15 +67,6 @@ function loadProjects() {
 
     firebaseInit();
 
-    // var table = document.getElementById('myUL')[1];
-    // var ref = firebase.database().ref().child('/projects');
-    // ref.on("value", function (element) {
-    //     snapshot.forEach(function (child) {
-    //         console.log(JSON.stringify);
-
-    //     });
-    // });
-
     // Get a database reference to our posts
     var db = firebase.database();
     var ref = db.ref("projects/");
@@ -90,7 +85,7 @@ function loadProjects() {
             // Setting li's inner text to appropriate values.
             li.innerText = project.projectName + ' | ' + project.projectId +
                 ' | ' + project.projectType + ' | ' + project.projectCity + ' | ' +
-                project.projectState + ' | ' + project.projectZipCode + ' | ' + project.projectDate
+                project.projectState + ' | ' + project.projectZipCode + ' | ' + project.projectDate + '|' + project.projectFile
 
             a.setAttribute('href', "projectPage.html")
 
@@ -107,6 +102,22 @@ function loadProjects() {
 }
 
 /**
+ * 
+ * Function to upload and image to Firebase Storage for later access.
+ * 
+ * @param {*} fileName 
+ */
+function uploadImage() {
+
+    
+
+
+
+}
+
+
+
+/**
  * Function to redirect to the homepage when a project is submitted.
  */
 function redirect() {
@@ -120,7 +131,7 @@ function firebaseInit() {
         authDomain: "ttdataarchitecture.firebaseapp.com",
         databaseURL: "https://ttdataarchitecture.firebaseio.com",
         projectId: "ttdataarchitecture",
-        storageBucket: "",
+        storageBucket: "gs://ttdataarchitecture.appspot.com",
         messagingSenderId: "868370223403"
     };
     // App initialization

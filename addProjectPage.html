@@ -41,9 +41,54 @@
                 <h4>Upload Files for Your Project: </h4>
                 <form id="project-form">
 
-                    <div class="fallback">
-                        <input name="file" type="file" multiple />
-                    </div>
+                    <progress value="0" max="100" id="uploader"></progress>
+                    <input name="projectFile" id="projectFile" type="file" />
+
+                    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+                    <script>
+                        //HAD TO COMMENT OUT FIREBASE SCRIPT AT BOTTOM TO WORK
+
+                        // Initialize Firebase APP
+                        firebaseInit()
+
+                        //Elements
+                        var uploader = document.getElementById("uploader")
+                        var fileButton = document.getElementById("projectFile")
+
+                        //Listen for changes
+                        fileButton.addEventListener('change', function (e) {
+
+                            //Get file
+                            var file = e.target.files[0]
+
+                            //Storage Ref
+                            var storageRef = firebase.storage().ref('propertyPictures/' + file.name);
+
+                            //Upload File, subscribing to state changes
+                            var task = storageRef.put(file);
+
+                            //Update Progress
+                            task.on('state_changed',
+
+                                function progress(snapshot) {
+                                    var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                                    uploader.value = percentage;
+                                },
+
+                                function error(err) {
+                                    alert("Your file type may not be supported, Please try again")
+                                },
+
+                                function complete() {
+                                    alert("File Uploaded Successfully");
+                                },
+
+                            );
+
+                        });
+
+                    </script>
+
                     <h4>Project Information:</h4>
 
                     <div class="input-group">
@@ -63,15 +108,15 @@
 
             </div>
             </form>
-         <!-- id="submitButton"type="submit" -->
+            <!-- id="submitButton"type="submit" -->
 
-            <button class="button" onclick="submitForm()">Add Project</button>
+            <button class="button" id="submitButton" onclick="submitForm()">Add Project</button>
 
         </div>
     </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script> -->
     <script src="js/addProjectPage.js"></script>
 
 
