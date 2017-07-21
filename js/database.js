@@ -6,9 +6,6 @@
  */
 function writeUserData(name, id, type, date, city, state, zip, file) {
 
-
-    // firebaseInit();
-
     //writes data to the database
     firebase.database().ref('projects').child(id).set({
         projectName: name,
@@ -18,14 +15,8 @@ function writeUserData(name, id, type, date, city, state, zip, file) {
         projectCity: city,
         projectState: state,
         projectZipCode: zip,
-        // projectFile: file,
 
     });
-
-    //Uploads image to firebase storage for later access
-    // uploadImage(file);
-
-
 
     var delayMillis = 1000; //1 second
 
@@ -106,7 +97,6 @@ function loadProjects() {
  */
 function uploadImage() {
 
-
     //Elements
     var uploader = document.getElementById("uploader")
     var fileButton = document.getElementById("projectFile")
@@ -115,32 +105,42 @@ function uploadImage() {
     //Listen for changes
     fileButton.addEventListener('change', function (e) {
 
-        //Get file
-        var file = e.target.files[0]
+        var nameField = document.getElementsByName("projectName")
 
-        //Storage Ref
-        var storageRef = firebase.storage().ref('propertyPictures/' + form.projectName.value + '/' + file.name);
+        if (form.projectName.value == null || form.projectName.value == "") {
+            alert("For storage purposes, please enter a project name before submitting any files")
+            fileButton.value = ''
+            return;
 
-        //Upload File, subscribing to state changes
-        var task = storageRef.put(file);
+        } else {
 
-        //Update Progress
-        task.on('state_changed',
+            //Get file
+            var file = e.target.files[0]
 
-            function progress(snapshot) {
-                var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                uploader.value = percentage;
-            },
+            //Storage Ref
+            var storageRef = firebase.storage().ref('propertyPictures/' + form.projectName.value + '/' + file.name);
 
-            function error(err) {
-                alert("Your file type may not be supported, Please try again")
-            },
+            //Upload File, subscribing to state changes
+            var task = storageRef.put(file);
 
-            function complete() {
-                alert("File Uploaded Successfully");
-            },
+            //Update Progress
+            task.on('state_changed',
 
-        );
+                function progress(snapshot) {
+                    var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    uploader.value = percentage;
+                },
+
+                function error(err) {
+                    alert("Your file type may not be supported, Please try again")
+                },
+
+                function complete() {
+                    alert("File Uploaded Successfully");
+                },
+
+            );
+        }
 
     });
 
