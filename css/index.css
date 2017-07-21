@@ -82,7 +82,7 @@ a:hover {
     color: dodgerblue;
     width: 10rem;
     position: relative;
-    top: 4rem;
+    /* top: 4rem; */
     border-radius: 6px;
  
 
@@ -94,14 +94,14 @@ a:hover {
     color: white;
 }
 
-#submitButton {
+ #submitButton {
 
     font-size: 25px;
     width: 240px;
-    height: 60px;
+    height: 70px;
     margin-left: 40%;
 
-}
+} 
 
 #AddProjectButton {
 
@@ -162,3 +162,4 @@ a:hover {
     margin-top: 40px;
 
 }
+

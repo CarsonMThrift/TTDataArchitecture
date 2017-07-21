@@ -7,7 +7,7 @@
 function writeUserData(name, id, type, date, city, state, zip, file) {
 
 
-    firebaseInit();
+    // firebaseInit();
 
     //writes data to the database
     firebase.database().ref('projects').child(id).set({
@@ -42,9 +42,6 @@ function writeUserData(name, id, type, date, city, state, zip, file) {
  * Function to handle the submission of a new project
  */
 function submitForm() {
-
-    console.log("ran")
-
 
     // Form reference
     const f = document.getElementById("project-form")
@@ -109,8 +106,43 @@ function loadProjects() {
  */
 function uploadImage() {
 
-    
 
+    //Elements
+    var uploader = document.getElementById("uploader")
+    var fileButton = document.getElementById("projectFile")
+    var form = document.getElementById("project-form")
+
+    //Listen for changes
+    fileButton.addEventListener('change', function (e) {
+
+        //Get file
+        var file = e.target.files[0]
+
+        //Storage Ref
+        var storageRef = firebase.storage().ref('propertyPictures/' + form.projectName.value + '/' + file.name);
+
+        //Upload File, subscribing to state changes
+        var task = storageRef.put(file);
+
+        //Update Progress
+        task.on('state_changed',
+
+            function progress(snapshot) {
+                var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                uploader.value = percentage;
+            },
+
+            function error(err) {
+                alert("Your file type may not be supported, Please try again")
+            },
+
+            function complete() {
+                alert("File Uploaded Successfully");
+            },
+
+        );
+
+    });
 
 
 }
