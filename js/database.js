@@ -20,6 +20,7 @@ function writeUserData(name, id, type, date, city, state, zip) {
         projectZipCode: zip,
 
     });
+    
 
 
     var delayMillis = 1000; //1 second
