@@ -37,9 +37,9 @@ function submitForm() {
     const state = f.projectState.value
     const zip = f.projectZipCode.value
 
-    if(verifyUserInput()){
+    if (verifyUserInput()) {
         writeUserData(name, id, type, date, city, state, zip);
-    }else{
+    } else {
         alert("Please fill out all required fields")
     }
 }
@@ -57,7 +57,7 @@ function verifyUserInput() {
 
     if (name == "" || id == "" || type == "" || date == "" || city == "" || state == "" || zip == "") {
         return false;
-    }else{
+    } else {
         return true;
     }
 
@@ -88,19 +88,59 @@ function loadProjects() {
             // Setting li's inner text to appropriate values.
             li.innerText = project.projectName + ' | ' + project.projectId +
                 ' | ' + project.projectType + ' | ' + project.projectCity + ' | ' +
-                project.projectState + ' | ' + project.projectZipCode + ' | ' + project.projectDate + '|' + project.projectFile
+                project.projectState + ' | ' + project.projectZipCode + ' | ' + project.projectDate
 
-            a.setAttribute('href', "projectPage.html")
+            li.setAttribute('data', project)
+
+            a.setAttribute('href', "projectPage.html?" + project.projectId)
 
             // Append li to the list
             a.appendChild(li)
             list.appendChild(a)
         });
 
-
     }, function (errorObject) {
         console.log("The read failed: " + errorObject.code);
     });
+}
+
+/**
+ * Function to render a single project when 
+ * a user selects it from the UL on the main page
+ */
+function renderSingleProject(keyId) {
+
+    const firebaseApp = firebaseInit();
+    //References
+    // var project = firebase.database.ref().child(keyId);
+
+    //ref for datapoints
+    var title = document.getElementById("projectTitle")
+    var type = document.getElementById("projectType")
+    var city = document.getElementById("projectCity")
+    var state = document.getElementById("projectState")
+    var zip = document.getElementById("projectZip")
+    var status = document.getElementById("projectStatus")
+    var notes = document.getElementById("projectNotes")
+    var files = document.getElementById("projectFiles")
+    var image = document.getElementById("propertyImage")
+
+    //FIREBASE
+
+    var db = firebaseApp.database();
+    // Get a reference to the storage service, which is used to create references in your storage bucket
+    // Create a storage reference from our storage service
+
+    var ref = db.ref("projects/" + keyId).once('value').then(function (snapshot) {
+        title.innerText = snapshot.val().projectName;
+        type.innerText = snapshot.val().projectType;
+        city.innerText = snapshot.val().projectCity;
+        state.innerText = snapshot.val().projectState;
+        zip.innerText = snapshot.val().projectZipCode;
+        status.innerText = snapshot.val().projectStatus;
+
+    });
+
 }
 
 /**
@@ -119,10 +159,10 @@ function uploadImage() {
     //Listen for changes
     fileButton.addEventListener('change', function (e) {
 
-        var nameField = document.getElementsByName("projectName")
+        var projectId = document.getElementsByName("projectId")
 
-        if (form.projectName.value == null || form.projectName.value == "") {
-            alert("For storage purposes, please enter a project name before submitting any files")
+        if (form.projectId.value == null || form.projectId.value == "") {
+            alert("For storage purposes, please enter a project id before submitting any files")
             fileButton.value = ''
             return;
 
@@ -132,7 +172,7 @@ function uploadImage() {
             var file = e.target.files[0]
 
             //Storage Ref
-            var storageRef = firebase.storage().ref('propertyPictures/' + form.projectName.value + '/' + file.name);
+            var storageRef = firebase.storage().ref('propertyPictures/' + projectId.value + '/' + file.name);
 
             //Upload File, subscribing to state changes
             var task = storageRef.put(file);
@@ -167,6 +207,17 @@ function redirect() {
 }
 
 /**
+ * Function to get the query string from the search bar address. 
+ */
+
+function queryString() {
+
+    var qs = window.location.search.substr(1)
+
+    return qs;
+}
+
+/**
  * Function to initiate the firebase application.
  */
 function firebaseInit() {
@@ -179,5 +230,7 @@ function firebaseInit() {
         messagingSenderId: "868370223403"
     };
     // App initialization
-    firebase.initializeApp(config);
+    const app = firebase.initializeApp(config);
+
+    return app;
 }
