@@ -11,6 +11,7 @@ function writeUserData(name, id, type, date, city, state, zip, file) {
         projectDate: date,
         projectCity: city,
         projectState: state,
+        projectStatus: status,
         projectZipCode: zip,
 
     });
@@ -35,10 +36,11 @@ function submitForm() {
     const date = f.projectDate.value
     const city = f.projectCity.value
     const state = f.projectState.value
+    const status = f.projectStatus.value
     const zip = f.projectZipCode.value
 
     if (verifyUserInput()) {
-        writeUserData(name, id, type, date, city, state, zip);
+        writeUserData(name, id, type, date, city, state,status, zip);
     } else {
         alert("Please fill out all required fields")
     }
