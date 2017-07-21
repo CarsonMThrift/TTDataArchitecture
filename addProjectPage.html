@@ -52,20 +52,20 @@
                         <input class="input-group-field" type="text" name="projectStatus" placeholder="Project Status..." required/>
                         <input class="input-group-field" type="text" name="projectZipCode" placeholder="Project ZIP Code..." required/>
 
-                        <h4>Upload Files for Your Project: </h4>
-
                         <div id="fileUploader">
+
+                            <h4 id="UploadFilesHeader">Upload Files for Your Project: </h4>
+
                             <progress value="0" max="100" id="uploader"></progress>
-                            <input name="projectFile" id="projectFile" type="file" />
+                            <input name="projectFile" id="projectFile" type="file" multiple/>
                             <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
                             <script>
-                                    //HAD TO COMMENT OUT FIREBASE SCRIPT AT BOTTOM TO WORK
-                                    // Initialize Firebase APP
-                                    firebaseInit()
+                                //HAD TO COMMENT OUT FIREBASE SCRIPT AT BOTTOM TO WORK
+                                // Initialize Firebase APP
+                                firebaseInit()
 
-                                    //Calling upload image from database.js ( ~ line 110)
-                                    uploadImage();
-
+                                //Calling upload image from database.js ( ~ line 110)
+                                uploadImage();
                             </script>
                         </div>
                     </div>
