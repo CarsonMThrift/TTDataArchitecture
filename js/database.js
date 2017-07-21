@@ -21,6 +21,16 @@ function writeUserData(name, id, type, date, city, state, zip) {
 
     });
 
+
+    var delayMillis = 1000; //1 second
+
+    setTimeout(function () {
+        //your code to be executed after 1 second
+        redirect();
+    }, delayMillis);
+
+    
+
 }
 
 /**
