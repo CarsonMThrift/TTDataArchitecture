@@ -1,11 +1,12 @@
 /**
  * Function to write data to the Firebase Database based on the user input
  */
-function writeUserData(name, id, type, date, city, state, status, zip, file) {
+function writeUserData(name, leader, id, type, date, city, state, status, zip, file) {
 
     //writes data to the database
     firebase.database().ref('projects').child(id).set({
         projectName: name,
+        projectLeader: leader,
         projectId: id,
         projectType: type,
         projectDate: date,
@@ -32,6 +33,7 @@ function submitForm() {
     // Form reference
     const f = document.getElementById("project-form")
     const name = f.projectName.value
+    const leader = f.projectLeader.value
     const id = f.projectId.value
     const type = f.projectType.value
     const date = f.projectDate.value
@@ -43,7 +45,7 @@ function submitForm() {
     const file = document.getElementById('projectFile').value
 
     if (verifyUserInput()) {
-        writeUserData(name, id, type, date, city, state, status, zip, file);
+        writeUserData(name, leader, id, type, date, city, state, status, zip, file);
     } else {
         alert("Please fill out all required fields")
     }
@@ -56,6 +58,7 @@ function verifyUserInput() {
 
     const f = document.getElementById("project-form")
     const name = f.projectName.value
+    const leader = f.projectLeader.value
     const id = f.projectId.value
     const type = f.projectType.value
     const date = f.projectDate.value
@@ -65,7 +68,7 @@ function verifyUserInput() {
     const zip = f.projectZipCode.value
     const file = document.getElementById("projectFile").value
 
-    if (name == "" || id == "" || type == "" || date == "" || city == "" || state == "" || status == "" || zip == "" || file == "") {
+    if (name == "" || id == "" || type == "" || date == "" || city == "" || state == "" || status == "" || zip == "" || file == "" || leader == "") {
         return false;
     } else {
         return true;
@@ -131,6 +134,7 @@ function renderSingleProject(keyId) {
     var state = document.getElementById("projectState")
     var zip = document.getElementById("projectZip")
     var status = document.getElementById("projectStatus")
+    var leader = document.getElementById("projectLeader")
     var notes = document.getElementById("projectNotes")
     var files = document.getElementById("projectFiles")
     var image = document.getElementById("propertyImage")
@@ -148,6 +152,7 @@ function renderSingleProject(keyId) {
         state.innerText = snapshot.val().projectState;
         zip.innerText = snapshot.val().projectZipCode;
         status.innerText = snapshot.val().projectStatus;
+        leader.innerText = snapshot.val().projectLeader;
 
     });
 
