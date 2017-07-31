@@ -1,7 +1,7 @@
 /**
  * Function to write data to the Firebase Database based on the user input
  */
-function writeUserData(name, id, type, date, city, state, zip, file) {
+function writeUserData(name, id, type, date, city, state, status, zip, file) {
 
     //writes data to the database
     firebase.database().ref('projects').child(id).set({
@@ -13,6 +13,7 @@ function writeUserData(name, id, type, date, city, state, zip, file) {
         projectState: state,
         projectStatus: status,
         projectZipCode: zip,
+        projectFile: file,
 
     });
     var delayMillis = 1000; //1 second
@@ -39,8 +40,10 @@ function submitForm() {
     const status = f.projectStatus.value
     const zip = f.projectZipCode.value
 
+    const file = document.getElementById('projectFile').value
+
     if (verifyUserInput()) {
-        writeUserData(name, id, type, date, city, state,status, zip);
+        writeUserData(name, id, type, date, city, state, status, zip, file);
     } else {
         alert("Please fill out all required fields")
     }
@@ -57,8 +60,9 @@ function verifyUserInput() {
     const state = f.projectState.value
     const status = f.projectStatus.value
     const zip = f.projectZipCode.value
+    const file = document.getElementById("projectFile").value
 
-    if (name == "" || id == "" || type == "" || date == "" || city == "" || state == "" || status =="" || zip == "") {
+    if (name == "" || id == "" || type == "" || date == "" || city == "" || state == "" || status == "" || zip == "" || file == "") {
         return false;
     } else {
         return true;
@@ -71,7 +75,7 @@ function verifyUserInput() {
  */
 function loadProjects() {
 
-    firebaseInit();
+    // firebaseInit();
 
     // Get a database reference to our posts
     var db = firebase.database();
@@ -113,7 +117,7 @@ function loadProjects() {
  */
 function renderSingleProject(keyId) {
 
-    const firebaseApp = firebaseInit();
+    // const firebaseApp = firebaseInit();
     //References
     // var project = firebase.database.ref().child(keyId);
 
@@ -130,7 +134,7 @@ function renderSingleProject(keyId) {
 
     //FIREBASE
 
-    var db = firebaseApp.database();
+    var db = firebase.database();
     // Get a reference to the storage service, which is used to create references in your storage bucket
     // Create a storage reference from our storage service
 
@@ -143,6 +147,34 @@ function renderSingleProject(keyId) {
         status.innerText = snapshot.val().projectStatus;
 
     });
+
+}
+
+/**
+ * Function to get the property image for a requested property based on the keyId
+ */
+function getPropertyImage() {
+
+    // firebaseInit();
+
+    //Get the project ID from the queryString passed into the page
+    var keyId = queryString();
+
+    var projectRef = firebase.database().ref('projects').child(keyId)
+    var fileName = projectRef.file.value
+
+    var folderRef = firebase.storage().ref('propertyPictures/' + keyId + "/" + fileName);
+    var imageRef = folderRef.snapshot.value;
+
+        // Once the sign in completed, we get the download URL of the image
+        imageRef.getDownloadURL().then(function (url) {
+            // Once we have the download URL, we set it to our img element
+            document.getElementById('propertyImage').src = url;
+
+        }).catch(function (error) {
+            // If anything goes wrong while getting the download URL, log the error
+            console.error(error);
+        });
 
 }
 
