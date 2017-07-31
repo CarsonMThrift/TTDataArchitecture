@@ -49,6 +49,9 @@ function submitForm() {
     }
 }
 
+/**
+ * Function to verify that the user has filled in all fields
+ */
 function verifyUserInput() {
 
     const f = document.getElementById("project-form")
