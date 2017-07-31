@@ -68,7 +68,9 @@ function verifyUserInput() {
     const zip = f.projectZipCode.value
     const file = document.getElementById("projectFile").value
 
-    if (name == "" || id == "" || type == "" || date == "" || city == "" || state == "" || status == "" || zip == "" || file == "" || leader == "") {
+    if (name == "" || id == "" || type == "" || date == "" 
+        || city == "" || state == "" || status == "" 
+                || zip == "" || file == "" || leader == "") {
         return false;
     } else {
         return true;
