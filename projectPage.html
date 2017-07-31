@@ -55,7 +55,32 @@
         }
     </style>
 
-    <div class="ProjectInfo">
+    <div>
+        <button class="button" id="EditButton" onclick="myFunction(this);">Edit</button>
+
+        <script>
+            var oldId;
+            //Function to toggle the editability of each field
+            function myFunction(button) {
+                var x = document.getElementById("projectInfo");
+                if (x.contentEditable == "true") {
+                    x.contentEditable = "false";
+                    button.innerHTML = "Edit";
+                    updateProject(oldID);
+                } else {
+                    //Save the old Id in case the user needs to edit it. 
+                    //This must delete the old project at that ID
+                    oldID = document.getElementById("projectId").innerText
+                    x.contentEditable = "true";
+                    button.innerHTML = "Save";
+                }
+            }
+        </script>
+    </div>
+
+
+
+    <div class="ProjectInfo" id='projectInfo'>
 
         <!--Set image to placeholder in case image does not load  -->
 
@@ -63,9 +88,21 @@
 
         <h3 id="projectTitle"></h3>
 
+        <h4>Project ID:</h4>
+
+        <p id="projectId">
+
+        </p>
+
         <h4>Project Type:</h4>
 
         <p id="projectType">
+
+        </p>
+
+        <h4>Date of Completion:</h4>
+
+        <p id="projectDate">
 
         </p>
 
@@ -101,10 +138,6 @@
             Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec,
             egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.
         </p>
-
-        <h4>Project Files:</h4>
-
-        <p id="projectFiles"></p>
 
         <script>
             firebaseInit();

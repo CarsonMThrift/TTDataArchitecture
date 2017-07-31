@@ -1,7 +1,7 @@
 /**
  * Function to write data to the Firebase Database based on the user input
  */
-function writeUserData(name, leader, id, type, date, city, state, status, zip, file) {
+function writeUserData(name, leader, id, type, date, city, state, status, zip, submit) {
 
     //writes data to the database
     firebase.database().ref('projects').child(id).set({
@@ -14,15 +14,18 @@ function writeUserData(name, leader, id, type, date, city, state, status, zip, f
         projectState: state,
         projectStatus: status,
         projectZipCode: zip,
-        projectFile: file,
 
     });
-    var delayMillis = 1000; //1 second
 
-    setTimeout(function () {
-        //your code to be executed after 1 second
-        redirect();
-    }, delayMillis);
+    if (submit) {
+        var delayMillis = 1000; //1 second
+
+        setTimeout(function () {
+            //your code to be executed after 1 second
+            redirect();
+        }, delayMillis);
+    }
+
 }
 
 /**
@@ -42,13 +45,41 @@ function submitForm() {
     const status = f.projectStatus.value
     const zip = f.projectZipCode.value
 
-    const file = document.getElementById('projectFile').value
+    let submit = true;
 
     if (verifyUserInput()) {
-        writeUserData(name, leader, id, type, date, city, state, status, zip, file);
+        writeUserData(name, leader, id, type, date, city, state, status, zip, submit);
     } else {
         alert("Please fill out all required fields")
     }
+}
+
+/**
+ * Function to allow the updating of a project when the user edits a project page
+ * 
+ * @param {*} oldID // Old project Id when the user edits a project ID. 
+ *                     Used to remove the old project once editing is complete.
+ */
+function updateProject(oldID) {
+
+    const name = document.getElementById("projectTitle").innerText
+    const leader = document.getElementById("projectLeader").innerText
+    const id = document.getElementById("projectId").innerText
+    const type = document.getElementById("projectType").innerText
+    const date = document.getElementById("projectDate").innerText
+    const city = document.getElementById("projectCity").innerText
+    const state = document.getElementById("projectState").innerText
+    const status = document.getElementById("projectStatus").innerText
+    const zip = document.getElementById("projectZip").innerText
+
+
+    writeUserData(name, leader, id, type, date, city, state, status, zip, false)
+
+    if (oldID != id) {
+        //Remove old firebase project
+        firebase.database().ref('projects').child(oldID).remove()
+    }
+
 }
 
 /**
@@ -68,9 +99,9 @@ function verifyUserInput() {
     const zip = f.projectZipCode.value
     const file = document.getElementById("projectFile").value
 
-    if (name == "" || id == "" || type == "" || date == "" 
-        || city == "" || state == "" || status == "" 
-                || zip == "" || file == "" || leader == "") {
+    if (name == "" || id == "" || type == "" || date == ""
+        || city == "" || state == "" || status == ""
+        || zip == "" || file == "" || leader == "") {
         return false;
     } else {
         return true;
@@ -131,7 +162,9 @@ function renderSingleProject(keyId) {
 
     //ref for datapoints
     var title = document.getElementById("projectTitle")
+    var id = document.getElementById("projectId")
     var type = document.getElementById("projectType")
+    var date = document.getElementById("projectDate")
     var city = document.getElementById("projectCity")
     var state = document.getElementById("projectState")
     var zip = document.getElementById("projectZip")
@@ -149,7 +182,9 @@ function renderSingleProject(keyId) {
 
     var ref = db.ref("projects/" + keyId).once('value').then(function (snapshot) {
         title.innerText = snapshot.val().projectName;
+        id.innerText = snapshot.val().projectId;
         type.innerText = snapshot.val().projectType;
+        date.innerText = snapshot.val().projectDate;
         city.innerText = snapshot.val().projectCity;
         state.innerText = snapshot.val().projectState;
         zip.innerText = snapshot.val().projectZipCode;
@@ -176,15 +211,15 @@ function getPropertyImage() {
     var folderRef = firebase.storage().ref('propertyPictures/' + keyId + "/" + fileName);
     var imageRef = folderRef.snapshot.value;
 
-        // Once the sign in completed, we get the download URL of the image
-        imageRef.getDownloadURL().then(function (url) {
-            // Once we have the download URL, we set it to our img element
-            document.getElementById('propertyImage').src = url;
+    // Once the sign in completed, we get the download URL of the image
+    imageRef.getDownloadURL().then(function (url) {
+        // Once we have the download URL, we set it to our img element
+        document.getElementById('propertyImage').src = url;
 
-        }).catch(function (error) {
-            // If anything goes wrong while getting the download URL, log the error
-            console.error(error);
-        });
+    }).catch(function (error) {
+        // If anything goes wrong while getting the download URL, log the error
+        console.error(error);
+    });
 
 }
 
