@@ -41,12 +41,23 @@ function populateList() {
 
 }
 
+/**
+ * Function to determine whether the filter button should open/close nav 
+ */
+function showOrHideNav() {
 
+    var x = document.getElementById('mySidenav');
+    if (x.style.width === "400px") {
+        closeNav();
+    } else {
+        openNav();
+    }
+}
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("mySidenav").style.width = "400px";
+    document.getElementById("main").style.marginLeft = "400px";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
