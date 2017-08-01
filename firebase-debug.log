@@ -1,64 +1,53 @@
-[debug] [2017-07-24T16:25:38.510Z] ----------------------------------------------------------------------
-[debug] [2017-07-24T16:25:38.512Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\thrif\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2017-07-24T16:25:38.513Z] CLI Version:  3.9.1
-[debug] [2017-07-24T16:25:38.513Z] Platform:     win32
-[debug] [2017-07-24T16:25:38.513Z] Node Version: v6.11.0
-[debug] [2017-07-24T16:25:38.513Z] Time:         Mon Jul 24 2017 12:25:38 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-24T16:25:38.513Z] ----------------------------------------------------------------------
+[debug] [2017-08-01T13:28:41.485Z] ----------------------------------------------------------------------
+[debug] [2017-08-01T13:28:41.488Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\thrif\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-08-01T13:28:41.488Z] CLI Version:  3.9.1
+[debug] [2017-08-01T13:28:41.488Z] Platform:     win32
+[debug] [2017-08-01T13:28:41.488Z] Node Version: v6.11.0
+[debug] [2017-08-01T13:28:41.489Z] Time:         Tue Aug 01 2017 09:28:41 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-01T13:28:41.489Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2017-07-24T16:25:38.524Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2017-07-24T16:25:38.524Z] > authorizing via signed-in user
-[debug] [2017-07-24T16:25:38.526Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ttdataarchitecture  
- Mon Jul 24 2017 12:25:38 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-24T16:25:39.587Z] <<< HTTP RESPONSE 200
-[debug] [2017-07-24T16:25:39.588Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ttdataarchitecture/tokens  
- Mon Jul 24 2017 12:25:39 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-24T16:25:40.200Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'C:\Users\thrif\Documents\TT\TTDataArchitecture'...
-[info] 
-[debug] [2017-07-24T16:25:40.205Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/ttdataarchitecture  
- Mon Jul 24 2017 12:25:40 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-24T16:25:41.117Z] <<< HTTP RESPONSE 200
-[debug] [2017-07-24T16:25:41.117Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/868370223403/clients/_:getWebAppConfig  
- Mon Jul 24 2017 12:25:41 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-24T16:25:42.236Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: ./
-[info] +  hosting: Local server: http://localhost:5000
-
-[debug] [2017-07-31T11:59:12.683Z] ----------------------------------------------------------------------
-[debug] [2017-07-31T11:59:12.687Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\thrif\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2017-07-31T11:59:12.687Z] CLI Version:  3.9.1
-[debug] [2017-07-31T11:59:12.687Z] Platform:     win32
-[debug] [2017-07-31T11:59:12.687Z] Node Version: v6.11.0
-[debug] [2017-07-31T11:59:12.688Z] Time:         Mon Jul 31 2017 07:59:12 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-31T11:59:12.688Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2017-07-31T11:59:12.712Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2017-07-31T11:59:12.712Z] > authorizing via signed-in user
-[debug] [2017-07-31T11:59:12.716Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2017-07-31T11:59:12.716Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/xhZqwEo11IES-xdyBf2fLL79cyhvz-xfRkVLPtB5CgeAUvNdyK0qr-EOUOV7KMKP',
+[debug] [2017-08-01T13:28:41.499Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-08-01T13:28:41.499Z] > authorizing via signed-in user
+[debug] [2017-08-01T13:28:41.501Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-08-01T13:28:41.501Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/xhZqwEo11IES-xdyBf2fLL79cyhvz-xfRkVLPtB5CgeAUvNdyK0qr-EOUOV7KMKP',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Mon Jul 31 2017 07:59:12 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-31T11:59:12.843Z] <<< HTTP RESPONSE 200
-[debug] [2017-07-31T11:59:12.850Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ttdataarchitecture  
- Mon Jul 31 2017 07:59:12 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-31T11:59:13.738Z] <<< HTTP RESPONSE 200
-[debug] [2017-07-31T11:59:13.739Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ttdataarchitecture/tokens  
- Mon Jul 31 2017 07:59:13 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-31T11:59:15.440Z] <<< HTTP RESPONSE 200
+ Tue Aug 01 2017 09:28:41 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-01T13:30:26.088Z] ----------------------------------------------------------------------
+[debug] [2017-08-01T13:30:26.091Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\thrif\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-08-01T13:30:26.091Z] CLI Version:  3.9.1
+[debug] [2017-08-01T13:30:26.091Z] Platform:     win32
+[debug] [2017-08-01T13:30:26.091Z] Node Version: v6.11.0
+[debug] [2017-08-01T13:30:26.092Z] Time:         Tue Aug 01 2017 09:30:26 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-01T13:30:26.092Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-01T13:30:26.109Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-08-01T13:30:26.109Z] > authorizing via signed-in user
+[debug] [2017-08-01T13:30:26.111Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-08-01T13:30:26.111Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/xhZqwEo11IES-xdyBf2fLL79cyhvz-xfRkVLPtB5CgeAUvNdyK0qr-EOUOV7KMKP',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Aug 01 2017 09:30:26 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-01T13:30:26.240Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-01T13:30:26.247Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ttdataarchitecture  
+ Tue Aug 01 2017 09:30:26 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-01T13:30:26.816Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-01T13:30:26.816Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ttdataarchitecture/tokens  
+ Tue Aug 01 2017 09:30:26 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-01T13:30:27.078Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\thrif\Documents\TT\TTDataArchitecture'...
 [info] 
-[debug] [2017-07-31T11:59:15.442Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/ttdataarchitecture  
- Mon Jul 31 2017 07:59:15 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-31T11:59:16.308Z] <<< HTTP RESPONSE 200
-[debug] [2017-07-31T11:59:16.308Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/868370223403/clients/_:getWebAppConfig  
- Mon Jul 31 2017 07:59:16 GMT-0400 (Eastern Daylight Time)
-[debug] [2017-07-31T11:59:17.403Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-01T13:30:27.082Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/ttdataarchitecture  
+ Tue Aug 01 2017 09:30:27 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-01T13:30:28.003Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-01T13:30:28.003Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/868370223403/clients/_:getWebAppConfig  
+ Tue Aug 01 2017 09:30:28 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-08-01T13:30:28.568Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
 

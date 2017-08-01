@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
     <!-- <link rel="stylesheet" href="css/font-awesome.min.css">  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="css/addProjectPage.css" />
     <link rel="stylesheet" href="css/index.css" />
 </head>
 
@@ -25,6 +26,7 @@
     <div id="PageHeader">
         <a href="index.html">
             <div>
+                <button class="button" id="BackButton" onclick="goBack()">Go Back</button>
                 <img src="logos/ttlogo1.png" id="TTLogo">
                 <h1>Add a Project</h1>
                 <div>
@@ -33,6 +35,13 @@
             </div>
         </a>
     </div>
+
+    <script>
+        // Function to make the page go to previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 
 
     <div id="WholeForm">
@@ -43,15 +52,22 @@
                     <h4>Project Information:</h4>
 
                     <div class="input-group">
-                        <input class="input-group-field" type="text" name="projectName" placeholder="Project Name..." autofocus required/>                        <input class="input-group-field" type="text" name="projectLeader" placeholder="Project Leader..." required/>
+                        <input class="input-group-field" type="text" name="projectName" placeholder="Project Name..." autofocus required/>
                         <input class="input-group-field" type="text" name="projectLeader" placeholder="Project Leader..." required/>
                         <input class="input-group-field" type="text" name="projectId" placeholder="Project ID Number..." required/>
                         <input class="input-group-field" type="text" name="projectType" placeholder="Project Type..." required/>
                         <input class="input-group-field" type="text" name="projectDate" placeholder="Project Date..." required/>
                         <input class="input-group-field" type="text" name="projectCity" placeholder="Project City..." required/>
                         <input class="input-group-field" type="text" name="projectState" placeholder="Project State..." required/>
-                        <input class="input-group-field" type="text" name="projectStatus" placeholder="Project Status..." required/>
                         <input class="input-group-field" type="text" name="projectZipCode" placeholder="Project ZIP Code..." required/>
+
+                        <div class="statusSelector">
+                            <select class="selector" name="projectStatus" placeholder="Select Status" required>
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Closed">Closed</option>
+                            </select>
+                        </div>
 
                         <div id="fileUploader">
 

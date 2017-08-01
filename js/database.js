@@ -114,8 +114,6 @@ function verifyUserInput() {
  */
 function loadProjects() {
 
-    // firebaseInit();
-
     // Get a database reference to our posts
     var db = firebase.database();
     var ref = db.ref("projects/");

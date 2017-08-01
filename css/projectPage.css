@@ -13,18 +13,3 @@ p {
     width: 50rem;
 
 }
-
-#EditButton {
-
-    background-color: lightgrey;
-    color: dodgerblue;
-    border-radius: 6px;
-    float: right;
- 
-
-}
-
-#EditButton:hover {
-    background: lightgreen;
-    color: white;
-}

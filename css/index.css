@@ -75,7 +75,7 @@ a:hover {
 }
 
 
- #submitButton, #AddProjectButton {
+ #submitButton, #AddProjectButton, #BackButton {
 
     background-color: lightgrey;
     color: dodgerblue;
@@ -85,7 +85,7 @@ a:hover {
 
 }
 
-#AddProjectButton {
+#AddProjectButton, #BackButton {
     float:right;
     margin-top: 4rem;
     margin-right:3rem;
@@ -93,7 +93,7 @@ a:hover {
 }
 
 /*hover of all buttons*/
-.button:hover, #submitButton:hover, #AddProjectButton:hover {
+#BackButton:hover, #submitButton:hover, #AddProjectButton:hover {
     background: lightgreen;
     color: white;
 }
@@ -163,5 +163,6 @@ a:hover {
 #fileUploader {
     margin-top:5rem;
 }
+
 
 
