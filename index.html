@@ -34,11 +34,19 @@
 
     <div id="PageHeader">
         <div>
-            <a href="addProjectPage.html"><button class="button" id="AddProjectButton">New Project</button></a> 
+            <a href="addProjectPage.html"><button class="button" id="AddProjectButton">New Project</button></a>
             <img src="logos/ttlogo1.png" id="TTLogo">
             <h1>Thompson Thrift Project Index</h1>
             <h2>Search Below for Your Project</h2>
         </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
     </div>
 
     <!--List of Projects-->
@@ -48,10 +56,17 @@
 
             <!--Search Box-->
             <input type="text" id="searchInput" onkeyup="filterFunc()" placeholder="Search for Project..">
+            <div class="FilterButton">
+                <button id="FilterButton" onclick="openNav()">Filter Menu</button>
+            </div>
 
             <ul id="myUL">
-                <script>firebaseInit()</script>
-                <script> loadProjects(); </script>
+                <script>
+                    firebaseInit()
+                </script>
+                <script>
+                    loadProjects();
+                </script>
 
             </ul>
         </div>
