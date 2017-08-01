@@ -1,14 +1,16 @@
 .ProjectInfo {
-
     text-align: left;
-    margin-left: 10rem;
+    margin-left: 5rem;
     margin-top: 3rem;
-
+    margin-right: 5rem; 
+    border: 2px solid dodgerblue;
+    border-radius: 5px;
+    background-color:rgba(214, 214, 194,0.3);
 }
 
 p {
 
-    margin-left: 1rem;
+    margin-left: 3.5rem;
     margin-top: .5rem;
     margin-bottom: .3rem; 
     width: 50rem;
@@ -35,6 +37,7 @@ h2 {
 h4{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 2rem;
+    margin-left: 2rem;
     color:dodgerblue;
     text-decoration: underline;
 
@@ -42,4 +45,5 @@ h4{
 
 #projectTitle{
     font-family: 'Ariel Black';
+    margin-left: 3.5rem;
 }
