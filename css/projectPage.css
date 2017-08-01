@@ -13,3 +13,27 @@ p {
     width: 50rem;
 
 }
+
+h1, h2 {
+    
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-left: 5rem;
+
+}
+
+h1{
+    font-size: 70px;
+}
+
+h2 {
+    margin-bottom: 4rem;
+}
+
+h4{
+
+    margin-top: 2rem;
+    color:dodgerblue;
+
+}
+
