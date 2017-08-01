@@ -22,6 +22,30 @@ function filterFunc() {
 }
 
 /**
+ * Function to allow advance searching of project through the filtering sidebar
+ */
+function filterFuncAdvanced() {
+
+
+    alert("search")
+
+    // var input, ul, aRefs, a, i, state, acreage, clubhouseDate, status, units;
+
+    // state = document.getElementsByName("StateSelector").value
+    // acreage = document.getElementsByName("AcerageSelector").value
+    // clubhouseDate = document.getElementsByName("clubhouseDate")
+    // status = document.getElementsByName("StatusSelector")
+    // units = document.getElementsByName("UnitsSelector")
+
+    // ul = document.getElementById("myUL");
+    // aRefs = ul.getElementsByTagName('a');
+
+    
+
+
+}
+
+/**
  * Populates the list of Projects on the main page.
  */
 function populateList() {

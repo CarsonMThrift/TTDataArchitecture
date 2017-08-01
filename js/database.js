@@ -154,10 +154,6 @@ function loadProjects() {
  */
 function renderSingleProject(keyId) {
 
-    // const firebaseApp = firebaseInit();
-    //References
-    // var project = firebase.database.ref().child(keyId);
-
     //ref for datapoints
     var title = document.getElementById("projectTitle")
     var id = document.getElementById("projectId")
