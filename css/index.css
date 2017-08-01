@@ -44,6 +44,14 @@ h4{
 
 }
 
+#criteria {
+
+    margin-top: 1rem;
+    color: white;
+    margin-left: 1rem;
+
+}
+
 /*General format for the list items*/
 li {
 
@@ -75,7 +83,7 @@ a:hover {
 }
 
 
- #submitButton, #AddProjectButton, #BackButton, #FilterButton {
+ #submitButton, #AddProjectButton, #BackButton{
 
     background-color: lightgrey;
     color: dodgerblue;
@@ -105,16 +113,20 @@ a:hover {
     height: 70px;
     margin-left: 40%;
     margin-top: 2rem;
+    
 
 } 
 
 #FilterButton {
 
+    background-color: dodgerblue;
+    color: white;
     font-size: 25px;
     width: 240px;
     height: 50px;
     align-content: right;
-    margin-left: 55rem;
+    margin-left: 30rem;
+    border-radius: 6px;
 }
 
 .FilterButton {
@@ -192,7 +204,7 @@ a:hover {
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: dodgerblue; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -203,7 +215,7 @@ a:hover {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s
 }
@@ -232,4 +244,9 @@ a:hover {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+#criteriaInput, #selector {
+    margin-left: 1rem;
+    width:80%;
 }
