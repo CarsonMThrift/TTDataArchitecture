@@ -246,7 +246,7 @@ a:hover {
     .sidenav a {font-size: 18px;}
 }
 
-#criteriaInput, #selector {
+#criteriaInput, #filterSelector {
     margin-left: 1rem;
     width:80%;
 }
