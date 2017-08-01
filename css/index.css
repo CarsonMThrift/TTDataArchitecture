@@ -83,7 +83,7 @@ a:hover {
 }
 
 
- #submitButton, #AddProjectButton, #BackButton{
+ #submitButton, #AddProjectButton, #BackButton {
 
     background-color: lightgrey;
     color: dodgerblue;
@@ -117,22 +117,31 @@ a:hover {
 
 } 
 
+#filterSearchButton {
+    font-size: 20px;
+    width:90%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    background: lightgreen;
+    color: dodgerblue;
+    border-radius: 6px;
+
+}
+
+#filterSearchButton:hover {
+    
+    color:white;
+
+}
+
 #FilterButton {
 
     background-color: dodgerblue;
     color: white;
-    font-size: 25px;
-    width: 240px;
-    height: 50px;
-    align-content: right;
-    margin-left: 30rem;
     border-radius: 6px;
-}
-
-.FilterButton {
-
-    margin-bottom: 3rem;
-
+    width: 100%;
+    height:40px;
+    margin-bottom: 2rem;
 }
 
 #TTLogo{
@@ -155,9 +164,9 @@ a:hover {
     background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 100%; /* Full-width */
     font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
+    padding: 12px 20px 12px 40px;  /*Add some padding */
     border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 3rem; /* Add some space below the input */
+    margin-bottom: 1rem; /* Add some space below the input */
     margin-top: 3rem;
 }
 
@@ -248,5 +257,5 @@ a:hover {
 
 #criteriaInput, #filterSelector {
     margin-left: 1rem;
-    width:80%;
+    width:90%;
 }

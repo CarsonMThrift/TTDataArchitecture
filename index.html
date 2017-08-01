@@ -36,7 +36,6 @@
             <h5 id="criteria">Search by State:</h5>
             <select name="StateSelector" id="filterSelector">
                 <option value="">Select a State</option>
-                <option value="">none</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -90,15 +89,14 @@
                 <option value="WY">Wyoming</option>
             </select>
             <h5 id="criteria">Search by Acreage:</h5>
-                <select name="AcreageSelector" id="filterSelector">
+            <select name="AcreageSelector" id="filterSelector">
                     <option value="">Select Acreage</option>
-                    <option value="">none</option>
                     <option value="100">100+</option>
                     <option value="1000">1000+</option>
                     <option value="10000">10000+</option>
                 </select>
             <h5 id="criteria">Search by Units:</h5>
-                <select name="AcreageSelector" id="filterSelector">
+            <select name="UnitsSelector" id="filterSelector">
                     <option value="">Select Units</option>
                     <option value="">none</option>
                     <option value="100">100+</option>
@@ -106,12 +104,13 @@
                     <option value="10000">10000+</option>
                 </select>
             <h5 id="criteria">Search By Date:</h5>
-                <input id="criteriaInput" type="text" placeholder="mm/dd/yyyy" <br>
-                <h6 id="criteria">to</h6>
-                <input id="criteriaInput" type="text" placeholder="mm/dd/yyyy" <br>
+            <input id="criteriaInput" type="text" placeholder="mm/dd/yyyy" <br>
+            <h6 id="criteria">to</h6>
+            <input id="criteriaInput" type="text" placeholder="mm/dd/yyyy" <br>
 
             <h5 id="criteria"> Search by Status:</h5>
-                <select name="AcreageSelector" id="filterSelector">
+            <select name="StatusSelector" id="filterSelector">
+                    <option value="">Select a Status</option>
                     <option value="Pending">Pending</option>
                     <option value="Approved">Approved</option>
                     <option value="Under Construction">Under Construction</option>
@@ -119,9 +118,10 @@
                 </select>
 
             <h5 id="criteria">Search By Clubhouse Date:</h5>
-            <input id="criteriaInput" type="text" placeholder="mm/dd/yyyy"</>
+            <input id="criteriaInput" name="clubhouseDate" type="text" placeholder="mm/dd/yyyy" </>
 
         </div>
+        <button class="button" id="filterSearchButton" onclick="filterFuncAdvanced()">Search</button>
     </div>
     <div id="main">
         <!--Header-->
@@ -140,13 +140,15 @@
         <!--List of Projects-->
 
         <div class="row" id="listContainer">
-            <div class="medium-12 column">
+            <div class="medium-16 column">
 
+                <!-- <div id="FilterButtonDiv"> -->
+                <!-- </div> -->
                 <!--Search Box-->
                 <input type="text" id="searchInput" onkeyup="filterFunc()" placeholder="Search for Project or Project ID..">
-                <div class="FilterButton">
-                    <button id="FilterButton" onclick="showOrHideNav()">Filter Menu</button>
-                </div>
+                <button id="FilterButton" onclick="showOrHideNav()">Filter Menu</button>
+
+
 
                 <ul id="myUL">
                     <script>
