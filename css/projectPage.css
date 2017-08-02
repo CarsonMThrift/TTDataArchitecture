@@ -5,7 +5,7 @@
     margin-right: 5rem; 
     border: 2px solid dodgerblue;
     border-radius: 5px;
-    background-color:rgba(214, 214, 194,0.3);
+    background-color:rgba(214, 214, 194,0.15);
 }
 
 p {
@@ -38,7 +38,7 @@ h4{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 2rem;
     margin-left: 2rem;
-    color:dodgerblue;
+    color: black;
     text-decoration: underline;
 
 }
