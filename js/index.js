@@ -22,7 +22,7 @@ function filterFunc() {
 }
 
 /**
- * Function to allow advance searching of project through the filtering sidebar
+ * Function to allow advanced searching of project through the filtering sidebar
  */
 function filterFuncAdvanced() {
 
