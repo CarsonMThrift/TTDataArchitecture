@@ -15,11 +15,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
-    <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css" />  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/projectPage.css" />
-      
+
 
 
 
@@ -30,20 +31,19 @@
     <div id="PageHeader">
         <a href="index.html">
             <div>
-                <a href="addProjectPage.html"><button class="button" id="AddProjectButton">New Project</button></a> 
+                <a href="addProjectPage.html"><button class="button" id="AddProjectButton">New Project</button></a>
                 <button class="button" id="BackButton" onclick="goBack()">Go Back</button>
                 <img src="logos/ttlogo1.png" id="TTLogo">
                 <h1>Thompson Thrift Project Index</h1>
                 <h2>Project Info Page</h2>
             </div>
         </a>
-        
+
 
         <script>
             function goBack() {
                 window.history.back();
             }
-
         </script>
     </div>
 
@@ -90,35 +90,127 @@
         </script>
     </div>
 
+    <div id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="card">
+            <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                    <div data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        General Info - Name, Location, Type, Status
+                    </div>
+                </h5>
+            </div>
 
+            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-block">
+                    <h4 contenteditable="false">Project Title:</h4>
+
+                    <h3 id="projectTitle"></h3>
+
+                    <h4 contenteditable="false">Project ID:</h4>
+
+                    <p id="projectId">
+
+                    </p>
+
+                    <h4 contenteditable="false">Project Type:</h4>
+
+                    <p id="projectType">
+
+                    </p>
+
+                    <h4 contenteditable="false">Date of Completion:</h4>
+
+                    <p id="projectDate">
+
+                    </p>
+
+                    <h4 contenteditable="false">Project Location:</h4>
+
+                    <p id="projectCity">
+
+                    </p>
+
+                    <p id="projectState">
+
+                    </p>
+
+                    <p id="projectZip">
+
+                    </p>
+
+                    <h4 contenteditable="false">Project Status:</h4>
+
+                    <p id="projectStatus">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" role="tab" id="headingTwo">
+                <h5 class="mb-0">
+                    <div class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Team Info - Leader
+                    </div>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-block">
+                    <h4 contenteditable="false">Project Leader:</h4>
+
+                    <p id="projectLeader">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" role="tab" id="headingThree">
+                <h5 class="mb-0">
+                    <div class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Notes
+                    </div>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                <h4 contenteditable="false">Project Notes:</h4>
+
+                <p id="ProjectNotes">
+                    Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec,
+                    egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus
+                    nibh.
+                </p>
+            </div>
+        </div>
+    </div>
 
     <div class="ProjectInfo" id='projectInfo'>
 
         <!--Set image to placeholder in case image does not load  -->
 
-        <h4>Project Title:</h4>
+        <!-- <h4 contenteditable="false">Project Title:</h4>
 
         <h3 id="projectTitle"></h3>
 
-        <h4>Project ID:</h4>
+        <h4 contenteditable="false">Project ID:</h4>
 
         <p id="projectId">
 
         </p>
 
-        <h4>Project Type:</h4>
+        <h4 contenteditable="false">Project Type:</h4>
 
         <p id="projectType">
 
         </p>
 
-        <h4>Date of Completion:</h4>
+        <h4 contenteditable="false">Date of Completion:</h4>
 
         <p id="projectDate">
 
         </p>
 
-        <h4>Project Location:</h4>
+        <h4 contenteditable="false">Project Location:</h4>
 
         <p id="projectCity">
 
@@ -130,26 +222,26 @@
 
         <p id="projectZip">
 
-        </p>
+        </p> -->
 
-        <h4>Project Status:</h4>
+        <!-- <h4 contenteditable="false">Project Status:</h4>
 
         <p id="projectStatus">
 
-        </p>
+        </p> -->
 
-        <h4>Project Leader:</h4>
+        <!-- <h4 contenteditable="false">Project Leader:</h4>
 
         <p id="projectLeader">
 
-        </p>
+        </p> -->
 
-        <h4>Project Notes:</h4>
+        <!-- <h4 contenteditable="false">Project Notes:</h4>
 
         <p id="ProjectNotes">
             Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec,
             egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.
-        </p>
+        </p> -->
 
         <script>
             firebaseInit();
