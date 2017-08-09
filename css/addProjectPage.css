@@ -3,3 +3,26 @@
     margin-top: 3rem;
 
 }
+#DataFieldSteps{
+    float: left;
+    padding-top: 10px; 
+    margin-top: 200px;
+    width: 13%; 
+}
+
+#DataFieldSteps h6{
+    color:white;
+    border-style: solid;
+    background-color: dodgerblue;
+    border-color: lightgrey;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top:5px;
+}
+#WholeForm{
+    float: right; 
+    width: 87%;  
+}
