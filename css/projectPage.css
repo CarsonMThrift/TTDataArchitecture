@@ -1,11 +1,35 @@
+/* #DataFieldSteps{
+    float: left;
+    padding-top: 10px; 
+    margin-top: 200px;
+    width: 13%; 
+}
+
+#DataFieldSteps h6{
+    color:white;
+    border-style: solid;
+    background-color: dodgerblue;
+    border-color: lightgrey;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top:5px;
+} */
+.EditButton{
+    float: left;
+}
 .ProjectInfo {
     text-align: left;
-    margin-left: 5rem;
-    margin-top: 3rem;
-    margin-right: 5rem; 
+    margin-left: 5px; 
+    margin-top: 2px; 
+    margin-right: 10px;  
     border: 2px solid dodgerblue;
     border-radius: 5px;
     background-color:rgba(214, 214, 194,0.15);
+    /* float: right; 
+    width: 85%; */
 }
 
 p {
@@ -18,7 +42,7 @@ p {
 
 }
 
-h1, h2 {
+h1 {
     
     color: white;
     font-family: 'Open Sans Condensed', sans-serif; 
@@ -30,8 +54,17 @@ h1{
     font-size: 70px;
 }
 
-h2 {
-    margin-bottom: 4rem;
+#title {
+    color: dodgerblue;  
+    /* float: right;
+    width: 85%; */
+     /* margin-top: -50px;
+     margin-left: -300px; 
+     margin-bottom: -50px;
+     margin-right: 100px;   */
+}
+#title h2{
+    color:dodgerblue;
 }
 
 h4{

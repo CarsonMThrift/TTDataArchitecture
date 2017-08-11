@@ -1,0 +1,107 @@
+{
+    "projects": {
+                "Watermark":{
+                    "Acquisition":{
+                        "(ProjectIDS1)":{
+                            "Location":{
+                                "state": "",
+                                "city": "",
+                                "street": "",
+                                "zip": ""
+                            },
+                            "Acreage": "",
+                            "Units": "",
+                            "Model_Type/Model_Details":{
+                                "Bighouse": "",
+                                "E-Urban": "",
+                                "1_Bed/1_Bath": "",
+                                "2_Bed/2_Bath": "",
+                                "3_Bed/2_Bath": "",
+                                "Studio": "",
+                                "Stories": "",
+                                "Clubhouse": "",
+                                "Sq/ft": ""
+                            },
+                            "Notes":{
+                                "garage": "",
+                                "pets": ""
+                            },
+                            "Date":{
+                                "date_built": "",
+                                "date_acquired": "",
+                                "date_sold": ""
+                            },
+                            "Price": {
+                                "monthly":"",
+                                "annually":""
+                            },
+                            "Occupancy": "",
+                            "Taxes":{
+                                "tax_rate": "",
+                                "taxes_per_unit:": ""
+                            }
+                    },
+                    "Development":{
+                        
+                    },
+                    "Construction":{
+
+                    },
+                    "Disposition":{
+
+                    }
+                },
+                "Retail":{
+                    "Acquisition":{
+                        "(ProjectIDS1)":{
+                            "Location":{
+                                "state":"",
+                                "city":"",
+                                "street":"",
+                                "zip":""   
+                            },
+                            "Acreage":"",
+                            "Model_type/Model_details":{
+                                "Sq/ft":""
+                            },
+                            "Date":{
+                                "date_built":"",
+                                "date_acquired":"",
+                                "date_sold":""
+                            },
+                            "Price":{
+                                "monthly":"",
+                                "annually":""
+                            },
+                            "Taxes":{
+                                "tax_rate":""
+                            }
+                    },
+                    "Development":{
+                        
+                    },
+                    "Construction":{
+                        
+                    },
+                    "Disposition":{
+                        
+                    }
+                },
+                "Construction":{
+                    "Acquisition":{
+                        
+                    },
+                    "Development":{
+
+                    },
+                    "Construction":{
+
+                    },
+                    "Disposition":{
+                        
+                    }
+                }
+            }
+        }
+    }
+}

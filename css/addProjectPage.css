@@ -3,7 +3,7 @@
     margin-top: 3rem;
 
 }
-#DataFieldSteps{
+/* #DataFieldSteps{
     float: left;
     padding-top: 10px; 
     margin-top: 200px;
@@ -21,8 +21,11 @@
     padding-top: 15px;
     padding-bottom: 15px;
     margin-top:5px;
-}
+} */
 #WholeForm{
-    float: right; 
-    width: 87%;  
+    /* float: right; 
+    width: 87%;   */
+}
+h4{
+    color: black;
 }
