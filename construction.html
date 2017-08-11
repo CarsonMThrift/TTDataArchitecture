@@ -10,7 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="css/addProjectPage.css" /> 
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/division.css"/>
 
     <!--Firebase stuff  -->
     <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
@@ -27,32 +29,31 @@
     </style>
 
 </head>
-
 <body>
     <div id="main">
         <!--Header-->
 
         <div id="PageHeader">
+        <a href="index.html">
             <div>
-                <a href="addProjectPage.html"><button class="button" id="AddProjectButton">New Project</button></a>
+                <button class="button" id="BackButton" onclick="goBack()">Go Back</button>
                 <img src="logos/ttlogo1.png" id="TTLogo">
-                <h1>Thompson Thrift Project Index</h1>
-                <h2>Selet Which Division You Would Like to Search for a Project In</h2>
+                <h1>Construction</h1>
+                <div>
+                    <h2>Select which division you'd like to search a project in</h2>
+                </div>
             </div>
-        </div>
-
-        <div id="Division">
-            <ul>
-                <a href="watermark.html"><li><h5>Watermark</h5></li></a>
-                <a href="retail.html"><li><h5>Retail</h5></li></a>
-                <a href="construction.html"><li><h5>Construction</h5></li></a>
-            </ul>
-        </div>
-
     </div>
-
-    <script src="js/index.js"></script>
-
+    <!--Navigation for different data fields  -->
+    <div id="navigation">
+        <ul style="list-style-type:none">
+            <li><h6>Acquisition</h6></li>
+            <li><h6>Development</h6></li>
+            <li><h6>Construction</h6></li>
+            <li><h6>Disposition</h6></li>
+        </ul>
+    </div>
+    
 </body>
 
 </html>

@@ -1,0 +1,29 @@
+ #navigation{
+    float: left;
+    padding-top: 10px; 
+    width: 20%; 
+    margin-left: -1.5rem;  
+}
+
+#navigation h6{
+    color:white;
+    border-style: solid;
+    background-color: dodgerblue;
+    border-color: lightgrey;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top:5px;
+    text-align: center;
+} 
+
+#filtering{
+    float: right;
+    width: 80%;
+    border-style: solid; 
+}
+#filtering h1{
+    color: black;
+}

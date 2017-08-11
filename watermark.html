@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <script src="https://use.fontawesome.com/55529beb09.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thompson Thrift Data Architecture</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="css/addProjectPage.css" />
+    <link rel="stylesheet" href="css/index.css" /> 
+    <link rel="stylesheet" href="css/division.css"/>
+
+    <!--Firebase stuff  -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-messaging.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // Acquisition Filter (doesn't work, work on MON)
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#filtering").load("acquisition_W.html");
+            });
+        });
+    </script>
+
+    <script src="js/database.js"></script>
+    
+    <style>
+        body {
+            background-image: url('/images/Clubhouse-Night.jpg');
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main">
+        <!--Header-->
+
+        <div id="PageHeader">
+        <a href="index.html">
+            <div>
+                <button class="button" id="BackButton" onclick="goBack()">Go Back</button>
+                <img src="logos/ttlogo1.png" id="TTLogo">
+                <h1>Watermark</h1>
+                <div>
+                    <h2>Select which division you'd like to search a project in</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--Navigation for different data fields  -->
+    <div id="navigation">
+        <ul style="list-style-type:none">
+            <li id="AcquisitionFilter_W"><h6>Acquisition</h6></li>
+            <li id="DevelopmentFilter_W"><h6>Development</h6></li>
+            <li id="ConstructionFilter_W"><h6>Construction</h6></li>
+            <li id="DipositionFilter_W"><h6>Disposition</h6></li>
+        </ul>
+    </div>
+    <button>Click</button>
+    <!--Filter Display  -->
+    <div id="filtering">
+        <!-- <h1>Do you think this will work??</h1> -->
+    </div>
+</body>
+
+</html>
