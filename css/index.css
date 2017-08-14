@@ -118,7 +118,7 @@ h4{
 }
 
 /*hover of all buttons*/
-#BackButton:hover, #submitButton:hover, #AddProjectButton:hover, #FilterButton:hover {
+#BackButton:hover, #submitButton:hover, #AddProjectButton:hover {
     background: lightgreen;
     color: white;
 }
@@ -134,22 +134,6 @@ h4{
 
 } 
 
-#filterSearchButton {
-    font-size: 20px;
-    width:90%;
-    margin-left: 1rem;
-    margin-top: 1rem;
-    background: lightgreen;
-    color: dodgerblue;
-    border-radius: 6px;
-
-}
-
-#filterSearchButton:hover {
-    
-    color:white;
-
-}
 
 #FilterButton {
 

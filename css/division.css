@@ -29,10 +29,36 @@
 
 }
 #filtering{
+    /* margin-top: 10px; */
+    padding-top: 10px;
     float: right;
     width: 80%;
-    border-style: solid; 
+    color:black;
+    border-style: solid;
+    background-color: lightgray;
+    border-color: dodgerblue;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top:5px;
 }
 #filtering h1{
     color: black;
+}
+#filterSearchButton {
+    font-size: 20px;
+    width:90%;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    background-color: dodgerblue;
+    border-radius: 6px;
+
+}
+
+#filterSearchButton:hover {
+    background-color: white;
+    color:dodgerblue;
+
 }

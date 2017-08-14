@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-    <link rel="stylesheet" href="css/addProjectPage.css" /> 
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/addProjectPage.css" />
+    <link rel="stylesheet" href="css/index.css" /> 
     <link rel="stylesheet" href="css/division.css"/>
 
     <!--Firebase stuff  -->
@@ -20,8 +20,24 @@
     <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-messaging.js"></script>
-    <script src="js/database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // Acquisition Filter (This function is supposed to display acquisition information in the "filtering div. Does not work because I am using a local host. Might implement later.")
+//     function loadAcq() {
+//         var xhttp = new XMLHttpRequest();
+//         xhttp.onreadystatechange = function() {
+//             if (this.readyState == 4 && this.status == 200) {
+//                 document.getElementById("filtering").innerHTML =
+//                 this.responseText;
+//                 }
+//             };
+//   xhttp.open("GET", "ajaxxS.txt", true);
+//   xhttp.send();
+// }
+    </script>
 
+    <script src="js/database.js"></script>
+    
     <style>
         body {
             background-image: url('/images/Clubhouse-Night.jpg');
@@ -38,21 +54,29 @@
             <div>
                 <button class="button" id="BackButton" onclick="goBack()">Go Back</button>
                 <img src="logos/ttlogo1.png" id="TTLogo">
-                <h1>Construction</h1>
+                <h1>Watermark</h1>
                 <div>
-                    <h2>Select which division you'd like to search a project in</h2>
+                    <h2>Diposition</h2>
                 </div>
             </div>
+        </a>
     </div>
     <!--Navigation for different data fields  -->
     <div id="navigation">
         <ul style="list-style-type:none">
-            <li><h5>Acquisition</h5></li>
-            <li><h5>Development</h5></li>
-            <li><h5>Construction</h5></li>
-            <li><h5>Disposition</h5></li>
+            <a href="acquisitionFilter_W.html"><li id="AcquisitionFilter_W"><h5>Acquisition</h5></li></a>
+            <a href="developmentFilter_W.html"><li id="DevelopmentFilter_W" ><h5>Development</h5></li></a>
+            <a href="constructionFilter_W.html"><li id="ConstructionFilter_W"><h5>Construction</h5></li></a>
+            <a href="dipositionFilter_W.html"><li id="DipositionFilter_W"><h5>Disposition</h5></li></a>
         </ul>
     </div>
+    <!--Filter Display  -->
+    <div id="filtering">
+        <form>
+            
+        </form>
+    </div>
+
     
 </body>
 

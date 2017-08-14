@@ -1,0 +1,82 @@
+{
+    "Projects":{
+        "One":{
+            "Location":{
+                "state": "",
+                "city": "",
+                "street": "",
+                "zip": ""
+            },
+            "Acreage": "",
+            "Units": "",
+            "Model_Type(Model_Details)":{
+                "Bighouse": "",
+                "E-Urban": "",
+                "1_Bed_and_1_Bath": "",
+                "2_Bed_and_2_Bath": "",
+                "3_Bed_and_2_Bath": "",
+                "Studio": "",
+                "Stories": "",
+                "Clubhouse": "",
+                "Sq_ft": ""
+            },
+            "Notes":{
+                "garage": "",
+                "pets": ""
+            },
+            "Date":{
+                "date_built": "",
+                "date_acquired": "",
+                "date_sold": ""
+            },
+            "Price": {
+                "monthly":"",
+                "annually":""
+            },
+            "Occupancy": "",
+            "Taxes":{
+                "tax_rate": "",
+                "taxes_per_unit:": ""
+            }
+        },
+        "Two":{
+            "Location":{
+                "state": "",
+                "city": "",
+                "street": "",
+                "zip": ""
+                },
+            "Acreage": "",
+            "Units": "",
+            "Model_Type(Model_Details)":{
+                "Bighouse": "",
+                "E-Urban": "",
+                "1_Bed_and_1_Bath": "",
+                "2_Bed_and_2_Bath": "",
+                "3_Bed_and_2_Bath": "",
+                "Studio": "",
+                "Stories": "",
+                "Clubhouse": "",
+                "Sq_ft": ""
+            },
+            "Notes":{
+                "garage": "",
+                "pets": ""
+            },
+            "Date":{
+                "date_built": "",
+                "date_acquired": "",
+                "date_sold": ""
+            },
+            "Price": {
+                "monthly":"",
+                "annually":""
+            },
+            "Occupancy": "",
+            "Taxes":{
+                "tax_rate": "",
+                "taxes_per_unit:": ""
+            }
+        }
+    }
+}

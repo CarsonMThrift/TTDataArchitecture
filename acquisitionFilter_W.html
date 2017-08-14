@@ -56,7 +56,7 @@
                 <img src="logos/ttlogo1.png" id="TTLogo">
                 <h1>Watermark</h1>
                 <div>
-                    <h2>Select which division you'd like to search a project in</h2>
+                    <h2>Acquisition</h2>
                 </div>
             </div>
         </a>
@@ -64,24 +64,48 @@
     <!--Navigation for different data fields  -->
     <div id="navigation">
         <ul style="list-style-type:none">
-            <a href="pages/aqcuisitionFilter_W.html"><li id="AcquisitionFilter_W"><h5>Acquisition</h5></li></a>
-            <li id="DevelopmentFilter_W" a href="pages/developmentFilter_W.html"><h5>Development</h5></li></a>
-            <li id="ConstructionFilter_W" a href="pages/constructionFilter_W.html"><h5>Construction</h5></li></a>
-            <li id="DipositionFilter_W" a href="pages/dipositionFilter_W.html"><h5>Disposition</h5></li></a>
+            <a href="acquisitionFilter_W.html"><li id="AcquisitionFilter_W"><h5>Acquisition</h5></li></a>
+            <a href="developmentFilter_W.html"><li id="DevelopmentFilter_W" ><h5>Development</h5></li></a>
+            <a href="constructionFilter_W.html"><li id="ConstructionFilter_W"><h5>Construction</h5></li></a>
+            <a href="dipositionFilter_W.html"><li id="DipositionFilter_W"><h5>Disposition</h5></li></a>
         </ul>
     </div>
     <!--Filter Display  -->
     <div id="filtering">
         <form>
-            <h5>Location:</h5>
-            <h5>Acreage:</h5>
-            <h5>Units:</h5>
-            <h5>Model Type/Model Details:</h5>
-            <h5>Notes:</h5>
-            <h5>Date:</h5>
-            <h5>Price:</h5>
-            <h5>Taxes:</h5>
+            <!--Location  -->
+            <h5 id ="location"> Search by Location:</h5>
+            <input type="text" name="searchLocation" size="4" placeholder="Enter state, city, street, or zip">
+            <!--Acreage  -->
+            <h5 id ="acreage">Search by Acreage:</h5>
+            <input type="text" name="searchAcreage" size="15" placeholder="Enter acreage">
+            <!--Units  -->
+            <h5 id ="units">Search by Units:</h5>
+            <input type="text" name="searchUnits" placeholder="Enter number of units">
+            <!--Model Type/Model Details  -->
+            <h5 id ="model_type/model_details">Seach by Model Type/Model Details:</h5>
+            <input type="checkbox" name="bighouse" value="Bighouse"> Bighouse
+            <input type="checkbox" name="e-urban" value="E-Urban"> E-Urban<br>
+            <input type="checkbox" name="1 Bed/1 Bath" value="1bed_1bath"> 1 Bed/1 Bath
+            <input type="checkbox" name="2 Bed/2 Bath" value="2bed_2bath"> 2 Bed/2 Bath
+            <input type="checkbox" name="3 Bed/2 Bath" value="3bed_2bath"> 3 Bed/2 Bath
+            <input type="checkbox" name="studio" value="Studio"> Studio<br>
+            <input type="checkbox" name="clubhouse" value="Clubhouse"> Clubhouse<br>
+            <!--Notes  -->
+            <h5 id ="notes"h5>Notes:</h5>
+            <input type="checkbox" name="garage" value="Garage">Garage
+            <input type="checkbox" name="pets" value="Pets">Pets
+            <!--Dates  -->
+            <h5 id ="date">Search by Date:(mm/dd/yyyy)</h5>
+            <input type="text" placeholder="Search by date built, date acquired, date sold"> 
+            <!--Price  -->
+            <h5 id ="price">Search by Price:</h5>
+            <input type="number" placeholder="Monthly or anually">
+            <!--Taxes  -->
+            <h5 id ="taxes">Search by Taxes:</h5>
+            <input type="number" placeholder="Search by tax rate or taxes per unit"> 
         </form>
+        <button class="button" id="filterSearchButton" onclick="filterFuncAdvanced()">Search</button>
     </div>
 
     
