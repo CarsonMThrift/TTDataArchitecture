@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <script src="https://use.fontawesome.com/55529beb09.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thompson Thrift Data Architecture</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="css/addProjectPage.css" />
+    <link rel="stylesheet" href="css/index.css" /> 
+    <link rel="stylesheet" href="css/division.css"/>
+
+    <!--Firebase stuff  -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-messaging.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // Acquisition Filter (This function is supposed to display acquisition information in the "filtering div. Does not work because I am using a local host. Might implement later.")
+//     function loadAcq() {
+//         var xhttp = new XMLHttpRequest();
+//         xhttp.onreadystatechange = function() {
+//             if (this.readyState == 4 && this.status == 200) {
+//                 document.getElementById("filtering").innerHTML =
+//                 this.responseText;
+//                 }
+//             };
+//   xhttp.open("GET", "ajaxxS.txt", true);
+//   xhttp.send();
+// }
+    </script>
+
+    <script src="js/database.js"></script>
+    
+    <style>
+        body {
+            background-image: url('/images/Clubhouse-Night.jpg');
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main">
+        <!--Header-->
+
+        <div id="PageHeader">
+        <a href="index.html">
+            <div>
+                <button class="button" id="BackButton" onclick="goBack()">Go Back</button>
+                <img src="logos/ttlogo1.png" id="TTLogo">
+                <h1>Watermark</h1>
+                <div>
+                    <h2>Acquisition</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--Navigation for different data fields  -->
+    <!--Search Results  -->
+    <div id="results">
+        
+    </div>
+
+<script>
+    firebaseInit()
+</script>
+<script>
+    filterFuncAdvanced()
+</script>
+    
+</body>
+
+</html>

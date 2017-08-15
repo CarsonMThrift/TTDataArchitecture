@@ -62,3 +62,18 @@
     color:dodgerblue;
 
 }
+/*For displaying filtered results  */
+#results{
+    width: 100%;
+    padding: 10%;
+    color:black;
+    border-style: solid;
+    background-color: lightgray;
+    border-color: dodgerblue;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top:5px;
+}

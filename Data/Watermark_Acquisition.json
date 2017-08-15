@@ -2,40 +2,40 @@
     "Projects":{
         "One":{
             "Location":{
-                "state": "",
-                "city": "",
-                "street": "",
-                "zip": ""
+                "state": "Texas",
+                "city": "Greenwood",
+                "street": "4792 Massachusetts Avenue",
+                "zip": "46123"
             },
-            "Acreage": "",
-            "Units": "",
+            "Acreage": 18,
+            "Units": 15,
             "Model_Type(Model_Details)":{
-                "Bighouse": "",
-                "E-Urban": "",
-                "1_Bed_and_1_Bath": "",
-                "2_Bed_and_2_Bath": "",
-                "3_Bed_and_2_Bath": "",
-                "Studio": "",
-                "Stories": "",
-                "Clubhouse": "",
+                "Bighouse": true,
+                "E-Urban": false,
+                "1_Bed_and_1_Bath": 40,
+                "2_Bed_and_2_Bath": 40,
+                "3_Bed_and_2_Bath": 20,
+                "Studio": "N/A",
+                "Stories": 4,
+                "Clubhouse": true,
                 "Sq_ft": ""
             },
             "Notes":{
-                "garage": "",
-                "pets": ""
+                "garage": true,
+                "pets": true
             },
             "Date":{
-                "date_built": "",
-                "date_acquired": "",
-                "date_sold": ""
+                "date_built": "02-10-14",
+                "date_acquired": "04-11-15",
+                "date_sold": "05-12-16"
             },
             "Price": {
-                "monthly":"",
-                "annually":""
+                "monthly":"1280/month",
+                "annually":"15360/yr"
             },
-            "Occupancy": "",
+            "Occupancy": "98%",
             "Taxes":{
-                "tax_rate": "",
+                "tax_rate": "15%",
                 "taxes_per_unit:": ""
             }
         },
@@ -55,7 +55,6 @@
                 "2_Bed_and_2_Bath": "",
                 "3_Bed_and_2_Bath": "",
                 "Studio": "",
-                "Stories": "",
                 "Clubhouse": "",
                 "Sq_ft": ""
             },
