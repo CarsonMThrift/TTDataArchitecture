@@ -1,6 +1,13 @@
 # TTDataArchitecture
 This repo is a project for Thompson Thrift Development to keep track of all projects/developments involving Thompson Thrift.
 
+# Helpful Links 
+
+Firebase Console:
+https://console.firebase.google.com/project/ttdataarchitecture/overview
+
+Firebase Web Documentation:
+https://firebase.google.com/docs/web/setup
 
 # Setup 
 
