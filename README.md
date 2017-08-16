@@ -29,6 +29,10 @@ This project depends on certain NPM modules and Firebase tools in order to funct
   
   # General Notes
   
+  ## Styling
+  
+  Most of the pages take from the css file 'index.css'. This was to keep the styling consistent among the buttons and header throughout the pages. 
+  
   ## Firebase
   
   ### Storage
@@ -39,7 +43,4 @@ This project depends on certain NPM modules and Firebase tools in order to funct
     
    ### Routing 
    The application is currently passing the project ID from whatever LI the user clicks on from the main screen through the project URL. This ID then is used to find the correct project in Firebase.
-
-   ##Data
-   The current data structure represents the 3 departments at Thompson Thrift. Which are: Watermark, Retail, and Construction. Some of these departments contain more categories based on the actions they do with their properties. For example, Watermark and Retail contains sub-categores. These are Acquisition, Development-Design, Construction-Preconstruction, and Disposition. In these sub-categories there should be attributes that would give users the ability to filter through projects based on their division and its sub-categories. 
   
