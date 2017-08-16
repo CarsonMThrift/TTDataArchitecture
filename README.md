@@ -27,3 +27,9 @@ This project depends on certain NPM modules and Firebase tools in order to funct
   `firebase serve`
   
   
+  # General Notes
+  
+  ## Firebase
+  
+   This project was setup with a Firebase database as well as a Firebase storage bucket. The database currently stores all of the project information and the storage bucket stores all of the extra files such as images, documents, etc. In each instance, the project are stored under their unique project ID as inputed by the user. 
+  
