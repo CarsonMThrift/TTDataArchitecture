@@ -34,9 +34,9 @@ This project depends on certain NPM modules and Firebase tools in order to funct
   ### Storage
    This project was setup with a Firebase database as well as a Firebase storage bucket. The database currently stores all of the project information and the storage bucket stores all of the extra files such as images, documents, etc. In each instance, the project are stored under their unique project ID as inputed by the user. 
    
-   ### Editing
+  ### Editing
     In order to allow editing, the user is allowed to edit a projects page. If the user changes anything except the project ID, the project's information is written over. If the user changes the project ID, an entire new project is created and the information written on that new project. The old project is then deleted to avoid duplicates.
     
-    ### Routing 
+   ### Routing 
     The application is currently passing the project ID from whatever LI the user clicks on from the main screen through the project URL. This ID then is used to find the correct project in Firebase.
   
